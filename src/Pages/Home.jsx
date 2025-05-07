@@ -6,11 +6,10 @@ import { ChevronLeft, ChevronRight } from "react-feather";
 
 const Home = () => {
   const slides = [
+    "/assets/hero-image.png",
     "/vite.svg",
     "/assets/hero-image.png",
-    "/assets/logo-black.png",
-    "/assets/logo.png",
-    "/assets/logo-white.png",
+    "/vite.svg",
   ];
   const [current,setCurrent]= useState(0);
   const prev = ()=>{
@@ -52,14 +51,14 @@ const Home = () => {
         </div>
       </div>
       <div className="flex flex-col px-8 lg:px-30 ">
-        <div className="flex justify-between items-center">
+        <div className="md:flex justify-between items-center">
           <img
-            className="rounded-md w-[40%]  lg:h-[43vh] "
+            className="rounded-md w-full md:w-[40%]  lg:h-[43vh] "
             src="/assets/hero-image.png"
             alt=""
           />
-          <div className="w-[50%]">
-            <p className="text-3xl font-main font-normal">About Us</p>
+          <div className="w-full mt-10 md:mt-0 md:w-[50%]">
+            <p className="text-3xl mb-5 md:mt-0 font-main text-center md:text-left font-normal">About Us</p>
             <p className="text-lg font-secondary">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
               placeat, possimus nulla recusandae excepturi ab cumque iure
@@ -84,7 +83,7 @@ const Home = () => {
       </div>
       <div className="flex gap-10 px-8 lg:px-30  flex-col">
         <p className="text-5xl font-main text-center font-semibold">Gallery</p>
-        <div className=" flex-col">
+        <div className=" md:flex gap-10">
           <div className="w-full lg:w-[50%] mb-20 lg:mb-0 gap-5">
             <div className="flex gap-5">
               <Services></Services>
